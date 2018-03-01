@@ -15,7 +15,7 @@ using std::ifstream;
 using std::ofstream;
 
 
-const string INPUT_PATH = "";
+const string INPUT_PATH = "./data.txt";
 const string OUTPUT_PATH = "";
 
 

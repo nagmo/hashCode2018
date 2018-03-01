@@ -10,7 +10,6 @@
 class Parser {
 public:
     Parser();
-    ~Parser();
     std::vector<string> getParameters();
     void printResult(const std::vector<string> result);
 
