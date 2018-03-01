@@ -9,6 +9,23 @@
 
 class Ride {
 public:
+    int getBonus() const;
+
+    int getStartX() const;
+
+    void setStartX(int startX);
+
+    int getEndX() const;
+
+    void setEndX(int endX);
+
+    int getStartY() const;
+
+    void setStartY(int startY);
+
+    int getEndY() const;
+
+    void setEndY(int endY);
 
     Ride() = delete;
 
@@ -26,9 +43,17 @@ public:
 
     int getMax_end() const;
 
+    bool isBonusOn() const;
+
+    void setBonusOn(bool bonusOn);
+
 private:
-    std::vector<int> start;
-    std::vector<int> end;
+    int startX;
+    int endX;
+    int startY;
+    int endY;
+    int Bonus;
+    bool bonusOn;
     int value;
     int min_start;
     int max_end;

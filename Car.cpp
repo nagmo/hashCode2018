@@ -25,3 +25,9 @@ void Car::addRide(Ride& ride) {
     rides.push_back(ride);
     //todo update free x and y and tume
 }
+
+using Car;
+
+Car newcar(){
+
+}
