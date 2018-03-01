@@ -3,10 +3,19 @@
 //
 
 #include "Ride.h"
+#include "Parser.h"
 
 
-Ride::Ride(const string parameters) {
-
+Ride::Ride(string parameters) {
+    Parser parser;
+    std::vector<string> params = parser.split(parameters);
+    for( auto i=0; i <= params.size(); i++){
+        auto param = stoi(params[i]);
+        switch(i){
+            case 0:
+            case 1: start.push_back(param);
+        }
+    }
 }
 
 const std::vector<int> &Ride::getStart() const {
