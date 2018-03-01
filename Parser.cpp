@@ -21,7 +21,6 @@ std::vector<string> Parser::getParameters() {
     {
         lines.push_back(line);
     }
-
     return lines;
 }
 

@@ -20,8 +20,8 @@ using std::stoi;
 
 
 
-const string INPUT_PATH = "";
-const string OUTPUT_PATH = "";
+const string INPUT_PATH = "../input";
+const string OUTPUT_PATH = "../output";
 
 
 
