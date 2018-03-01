@@ -4,7 +4,7 @@
 
 #include "Hasher.h"
 
-Hasher::Hasher(const std::vector<string>) {
+Hasher::Hasher(const std::vector<std::string>) {
 
 }
 
@@ -12,6 +12,6 @@ Hasher::~Hasher() {
 
 }
 
-const std::vector<string> Hasher::getResult() {
-    return std::vector<string>();
+const std::vector<std::string> Hasher::getResult() {
+    return std::vector<std::string>();
 }

@@ -4,6 +4,6 @@ project(hashCode2018)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-Wall -pedantic-errors -Werror")
 
-set(SOURCE_FILES main.cpp main.cpp Parser.cpp Parser.h utility.h Hasher.cpp Hasher.h Ride.cpp Ride.h)
+set(SOURCE_FILES main.cpp  utility.h Hasher.cpp Ride.cpp Parser.cpp)
 
 add_executable(hashCode2018 ${SOURCE_FILES})
