@@ -9,7 +9,7 @@
 Ride::Ride(string parameters) {
     Parser parser;
     std::vector<string> params = parser.split(parameters);
-    for( auto i=0; i <= params.size(); i++){
+    for(unsigned int i=0; i <= params.size(); i++){
         auto param = stoi(params[i]);
         switch(i){
             case 0:

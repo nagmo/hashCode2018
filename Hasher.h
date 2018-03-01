@@ -8,6 +8,7 @@
 #include "utility.h"
 #include "Car.h"
 #include "Ride.h"
+#include "Parser.h"
 
 using std::vector;
 

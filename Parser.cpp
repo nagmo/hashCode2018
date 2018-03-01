@@ -32,7 +32,7 @@ void Parser::printResult(const std::vector<string> result) {
     }
 }
 
-std::vector<string> Parser::split(string &s) {
+std::vector<string> Parser::split(string s) {
     std::vector<string> tokens;
     size_t pos = 0;
     string token;

@@ -18,7 +18,7 @@ int main(){
 
     //get results. //TODO: update name.
     parser.printResult(hash.getResult());
-*/
+
     return 0;
 }
 
