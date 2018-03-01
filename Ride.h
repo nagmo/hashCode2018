@@ -31,7 +31,7 @@ public:
 
     ~Ride() = default;
 
-    explicit Ride(const string parameters);
+    explicit Ride(string parameters);
 
     const std::vector<int> &getStart() const;
 

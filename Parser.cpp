@@ -2,7 +2,6 @@
 // Created by Nevo Agmon on 01/03/2018.
 //
 
-#include <cassert>
 #include "Parser.h"
 
 Parser::Parser() : inputFile(INPUT_PATH, std::ifstream::in),
@@ -28,7 +27,22 @@ std::vector<string> Parser::getParameters() {
 
 void Parser::printResult(const std::vector<string> result) {
 
-    for( auto line : result){
+    for( const auto &line : result){
         outputFile << line << std::endl;
     }
+}
+
+std::vector<string> Parser::split(string s) {
+    std::vector<string> tokens;
+    size_t pos = 0;
+    string token;
+    string delim = " ";
+    while ((pos = s.find(delim)) != string::npos) {
+        token = s.substr(0, pos);
+        tokens.push_back(token);
+        s.erase(0, pos + delim.length());
+    }
+    token = s.substr(0, pos);
+    tokens.push_back(token);
+    return tokens;
 }

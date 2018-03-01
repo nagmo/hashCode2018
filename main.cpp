@@ -2,10 +2,12 @@
 // Created by Nevo Agmon on 01/03/2018.
 //
 
+#include "utility.h"
 #include "Parser.h"
 #include "Hasher.h"
 
 int main(){
+
     //create parser and get parameters for class.
     Parser parser;
 
@@ -19,4 +21,5 @@ int main(){
 
     return 0;
 }
+
 
