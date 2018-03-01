@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project(hashCode2018)
+
+set(CMAKE_CXX_STANDARD 14)
+
+set(SOURCE_FILES main.cpp main.cpp Parser.cpp Parser.h utility.h)
+
+add_executable(hashCode2018 ${SOURCE_FILES})
