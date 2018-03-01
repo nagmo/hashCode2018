@@ -4,7 +4,7 @@
 
 #include "Hasher.h"
 using std::stoi;
-Hasher::Hasher(const std::vector<string> data) {
+Hasher::Hasher(const std::vector<string> data) : rides(), cars(){
 
 Hasher::Hasher(const std::vector<std::string>) {
 
@@ -13,8 +13,13 @@ Hasher::Hasher(const std::vector<std::string>) {
     c = stoi(mainData[1]);
     bonus = stoi(mainData[4]);
     steps = stoi(mainData[5]);
-//    rides;
-//    cars;
+    for(int i = 1; i < data.size(); i++){
+        rides.emplace_back(Ride(data[1]));
+    }
+    int carCount = stoi(mainData[2]);
+    for(int i = 0; i < carCount; i++){
+        cars.emplace_back(Car());
+    }
 }
 
 Hasher::~Hasher() {
