@@ -81,6 +81,10 @@ void Ride::setBonusOn(bool bonusOn) {
     Ride::bonusOn = bonusOn;
 }
 
+int Ride::getRideid() const {
+    return rideid;
+}
+
 int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible){
 
 

@@ -26,6 +26,3 @@ void Car::addRide(Ride& ride) {
 
 using Car;
 
-Car newcar(){
-
-}

@@ -17,7 +17,8 @@ public:
     explicit Hasher(const std::vector<string>);
     ~Hasher();
     const std::vector<string> getResult();
-private:
+    Ride nextride(int startX, int startY, int startT);
+
 
     int c;
     int r;
@@ -25,7 +26,7 @@ private:
     int steps;
     vector<Ride> rides;
     vector<Car> cars;
-
+private:
 
 };
 
