@@ -4,9 +4,7 @@
 
 #include "Car.h"
 
-Car::Car() : freeX(0), freeY(0), freeStep(0){
-
-}
+Car::Car() : freeX(0), freeY(0), freeStep(0){}
 
 int Car::getFreeR() {
     return freeX;
