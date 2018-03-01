@@ -6,6 +6,10 @@
 #define HASHCODE2018_HASHER_H
 
 #include "utility.h"
+#include "Car.h"
+#include "Ride.h"
+
+using std::vector;
 
 class Hasher {
 public:
@@ -13,6 +17,14 @@ public:
     ~Hasher();
     const std::vector<string> getResult();
 private:
+
+    int c;
+    int r;
+    int bonus;
+    int steps;
+    vector<Ride> rides;
+    vector<Car> cars;
+
 
 };
 
