@@ -85,6 +85,12 @@ int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible){
     int dDist=abs(startX-r.getStartX())+abs(startY-r.getStartY());
     int d=dtime>dDist? dtime: dDist;
 
+    if(StartT+d+t>r.getMax_end()){
+        *possible=false;
+        return 0;
+    }
+    else *possible=true;
+
     int bonus=dtime>dDist? r.getBonus(): 0;
     if(bonus==0) r.setBonusOn(false);
     else r.setBonusOn(true);
