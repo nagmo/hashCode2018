@@ -3,14 +3,20 @@
 //
 
 #include "Parser.h"
+#include "Hasher.h"
 
 int main(){
+    //create parser and get parameters for class.
     Parser parser;
-    std::vector<string> input = parser.getParameters();
-    std::cout << "print:";
-    for(string line : input){
-        std::cout << line << std::endl;
-    }
+
+    //build the class from the parser. //TODO: update name
+    Hasher hash(parser.getParameters());
+
+    //TODO: do_somthing
+
+    //get results. //TODO: update name.
+    parser.printResult(hash.getResult());
+
     return 0;
 }
 
