@@ -21,6 +21,9 @@ std::vector<string> Parser::getParameters() {
     return lines;
 }
 
-void Parser::printResult(std::vector<string> result) {
+void Parser::printResult(const std::vector<string> result) {
 
+    for( auto line : result){
+        outputFile << line << std::endl;
+    }
 }

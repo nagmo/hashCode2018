@@ -12,7 +12,7 @@ public:
     Parser();
     ~Parser();
     std::vector<string> getParameters();
-    void printResult(std::vector<string> result);
+    void printResult(const std::vector<string> result);
 
 private:
     ifstream inputFile;
