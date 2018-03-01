@@ -3,7 +3,7 @@
 //
 
 #include "Hasher.h"
-using std::stoi;
+
 Hasher::Hasher(const std::vector<string> data) : rides(), cars(){
     Parser p;
     auto mainData = p.split(data[0]);
@@ -18,6 +18,7 @@ Hasher::Hasher(const std::vector<string> data) : rides(), cars(){
     for(int i = 0; i < carCount; i++){
         cars.emplace_back(Car());
     }
+
 }
 
 Hasher::~Hasher() {

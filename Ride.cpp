@@ -12,9 +12,14 @@ Ride::Ride(string parameters) {
     for(unsigned int i=0; i <= params.size(); i++){
         auto param = stoi(params[i]);
         switch(i){
-            case 0:
-            case 1: start.push_back(param);
+            case 0: startX = param;
+            case 1: startY = param;
+            case 2: endX = param;
+            case 3: endY = param;
+            case 4: min_start = param;
+            case 5: max_end = param;
         }
+        value = std::abs(startX-endX) + std::abs(startY-endY);
     }
 }
 

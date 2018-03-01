@@ -57,6 +57,7 @@ private:
     int value;
     int min_start;
     int max_end;
+    bool used = false;
 };
 
 
