@@ -92,7 +92,7 @@ int Ride::getRideid() const {
     return rideid;
 }
 
-int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible){
+int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible, int *time_skew){
 
 
 
@@ -110,7 +110,7 @@ int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible){
     int bonus=dtime>dDist? r.getBonus(): 0;
     if(bonus==0) r.setBonusOn(false);
     else r.setBonusOn(true);
-
+    *time_skew = d+t;
     return t-d+bonus;
 
 }

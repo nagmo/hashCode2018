@@ -46,7 +46,7 @@ public:
     bool isBonusOn() const;
 
     void setBonusOn(bool bonusOn);
-    int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible);
+    int profitForRide(Ride r, int startX, int startY, int StartT, bool *possible, int *time_skew);
 
     int getRideid() const;
 

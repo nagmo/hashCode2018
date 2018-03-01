@@ -18,8 +18,7 @@ public:
     int getFreeStep();
     void addRide(Ride&);
 
-
-private:
+    int profit;
     int freeX;
     int freeY;
     int freeStep;

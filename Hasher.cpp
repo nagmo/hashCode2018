@@ -33,8 +33,8 @@ const std::vector<std::string> Hasher::getResult() {
     return std::vector<std::string>();
 }
 
-Ride Hasher::nextride(int startX, int startY, int startT, bool *exists){
-
+Ride Hasher::nextride(int startX, int startY, int startT, bool *exists, int *endtime){
+    int time_skew;
     bool firstrun=true;
     int p;
     bool poss=true;
@@ -42,27 +42,40 @@ Ride Hasher::nextride(int startX, int startY, int startT, bool *exists){
     auto toret;
     for(auto it: rides){
         if(firstrun){
-            p=profitForRide(it,startX,startY,startT,&poss);
+            p=profitForRide(it,startX,startY,startT,&poss,&time_skew);
             if(poss) {
                 firstrun=false;
                 bestride=it.getRideid();
                 toret=it;
+                *endtime = (startT+time_skew);
             }
         }
-        int tmp=profitForRide(it,startX,startY,startT,&poss);
+        int tmp=profitForRide(it,startX,startY,startT,&poss,&time_skew);
         if(poss&&tmp>p) {
             p=tmp;
             bestride=it.getRideid();
             toret=it;
+            *endtime = (startT+time_skew);
         }
     }
     rides.erase(toret);
+    if(poss==true){
+        *exists=false;
+        return nullptr;
+    }
     return toret;
 
 }
 
 Car newchain(){
     Car car;
-    Ride nxt=nextride(0, 0, 0);
-    bool possible;
+    bool possible=true;
+    Ride nxt=nextride(0, 0, 0,&possible);
+    int t=0;
+    while(possible){
+        car.addRide(nxt);
+        car.profit+=nxt.getValue()+nxt.getBonus();
+        nxt=nextride(nxt.getEndX(),nxt.getEndY(),&t);
+    }
+    return car;
 };
