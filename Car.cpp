@@ -8,11 +8,11 @@ Car::Car() : freeX(0), freeY(0), freeStep(0){
 
 }
 
-int Car::getFreeX() {
+int Car::getFreeR() {
     return freeX;
 }
 
-int Car::getFreeY() {
+int Car::getFreeC() {
     return freeY;
 }
 

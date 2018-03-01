@@ -13,8 +13,8 @@ using std::vector;
 class Car {
 public:
     Car();
-    int getFreeX();
-    int getFreeY();
+    int getFreeR();
+    int getFreeC();
     int getFreeStep();
     void addRide(Ride&);
 

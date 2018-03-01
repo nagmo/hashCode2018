@@ -4,13 +4,14 @@
 
 #include "Hasher.h"
 
-Hasher::Hasher(const std::vector<string>) {
-
+Hasher::Hasher(const vector<string> data) {
+    vector<string> mainData = split(data[0]);
+    r = mainData[0];
+    c = mainData[1];
+    bonus = mainData[4];
+    steps = mainData[5];
 }
 
-Hasher::~Hasher() {
-
-}
 
 const std::vector<string> Hasher::getResult() {
     return std::vector<string>();
