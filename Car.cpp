@@ -23,6 +23,9 @@ void Car::addRide(Ride& ride) {
     rides.push_back(ride);
     //todo update free x and y and tume
 }
+<<<<<<< HEAD
 
 using Car;
 
+=======
+>>>>>>> f655e0af58c8153f57a7814addd6d150d97477f9

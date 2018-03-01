@@ -14,7 +14,7 @@ using std::vector;
 
 class Hasher {
 public:
-    explicit Hasher(const std::vector<string>);
+    explicit Hasher(const std::vector<string>&);
     ~Hasher();
     const std::vector<string> getResult();
     Ride nextride(int startX, int startY, int startT);

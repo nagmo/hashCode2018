@@ -9,15 +9,22 @@
 Ride::Ride(string parameters) {
     Parser parser;
     std::vector<string> params = parser.split(parameters);
-    for(unsigned int i=0; i <= params.size(); i++){
+    for(unsigned int i=0; i <= 5; i++){
         auto param = stoi(params[i]);
         switch(i){
             case 0: startX = param;
+                break;
             case 1: startY = param;
+                break;
             case 2: endX = param;
+                break;
             case 3: endY = param;
+                break;
             case 4: min_start = param;
+                break;
             case 5: max_end = param;
+            default:
+                break;
         }
         value = std::abs(startX-endX) + std::abs(startY-endY);
     }

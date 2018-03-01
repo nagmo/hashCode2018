@@ -6,15 +6,17 @@
 #include "Ride.h"
 #include "Car.h"
 
-Hasher::Hasher(const std::vector<string> data) : rides(), cars(){
+Hasher::Hasher(const std::vector<string>& data) : rides(), cars(){
     Parser p;
-    auto mainData = p.split(data[0]);
+    auto firstRow = data[0];
+    auto mainData = p.split(firstRow);
     r = stoi(mainData[0]);
     c = stoi(mainData[1]);
     bonus = stoi(mainData[4]);
     steps = stoi(mainData[5]);
     for(unsigned int i = 1; i < data.size(); i++){
-        rides.emplace_back(Ride(data[1]));
+        Ride r = Ride(data[i]);
+        rides.push_back(r);
     }
     int carCount = stoi(mainData[2]);
     for(int i = 0; i < carCount; i++){
